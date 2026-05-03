@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* --sectionPadding: 2.5rem 5rem; */
+  --sectionPadding: 5rem;
 }
 
 @theme inline {
