@@ -30,12 +30,12 @@ const ProjectBox = ({
       }`}
     >
       <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-10 items-start">
-        <div className="relative rounded-2xl overflow-hidden ">
+        <div className="relative rounded-2xl overflow-hidden max-[750px]:w-full ">
           <Image
             src={`/assets/workPage/${image}.png`}
             alt={imageAlt}
             
-            className="object-cover"
+            className="object-cover w-full"
            width={500}
            height={500}
           />

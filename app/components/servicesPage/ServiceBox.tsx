@@ -39,12 +39,12 @@ const ServiceBox = ({
   );
 
   const imageBlock = (
-    <div className="relative rounded-xl overflow-hidden min-h-[280px]">
+    <div className="relative rounded-xl overflow-hidden min-h-[280px] max-[750px]:w-full">
       <Image
         src={`/assets/servicesPage/${image}.png`}
         alt={imageAlt}
         
-        className="object-cover"
+        className="object-cover w-full"
 width={500}
 height={500}
       />
@@ -52,7 +52,7 @@ height={500}
   );
 
   return (
-    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+    <div className="grid md:grid-cols-2  gap-12 items-stretch">
       {imagePosition === "left" ? (
         <>
           {imageBlock}

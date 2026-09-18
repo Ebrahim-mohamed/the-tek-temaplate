@@ -24,7 +24,7 @@ export function ProjectSection() {
         Featured Work
       </h1>
 
-      <div className="grid grid-cols-2 gap-[2rem]">
+      <div className="grid grid-cols-2 max-[750px]:grid-cols-1 gap-[2rem]">
         {projects.map((project, index) => (
           <div
             key={index}

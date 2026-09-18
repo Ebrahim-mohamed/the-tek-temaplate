@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "Our template",
+  title: "Mostafa Naguib",
 };
 
 export default function RootLayout({
