@@ -6,6 +6,6 @@ export default function Contact(){
     return <div>
         <HeroSection text="Let’s Talk" img="homePage" />
         <ContactSection/>
-        <FaqSection/>
+        {/* <FaqSection/> */}
     </div>
 }

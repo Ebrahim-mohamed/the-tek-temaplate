@@ -7,7 +7,7 @@ export default function About(){
     return <div>
         <HeroSection text="I’m Ahmad Mohamd" img="homePage" />
         <AboutSection/>
-        <TrustedEngineerSection/>
+        {/* <TrustedEngineerSection/> */}
         <ExperienceSection/>
     </div>
 }

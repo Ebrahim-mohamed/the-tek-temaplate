@@ -13,9 +13,9 @@ export default function Home() {
       <HeroSection text="Built Around What Matters" img="homePage" />
       <AboutSection/>
       <ServicesSection/>
-      <ClientsSection/>
+      {/* <ClientsSection/> */}
       <ProjectSection/>
-      <FeedbacksSection/>
+      {/* <FeedbacksSection/> */}
       <ContactSection/>
     </div>  );
 }
