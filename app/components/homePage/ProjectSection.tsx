@@ -3,22 +3,6 @@ const projects = [
     image: "pro3",
     name: "Founder EGYSAMART for Modern Engineers",
   },
-  {
-    image: "pro2",
-    name: "Founder and Managing Director of EUROPT",
-  },
-  {
-    image: "pro3",
-    name: "Managing Director of ASROW AS",
-  },
-  {
-    image: "pro4",
-    name: "Commercial Head-Board Member of EGYSMART",
-  },
-  {
-    image: "pro4",
-    name: "Professional Trainer",
-  },
 ];
 
 export function ProjectSection() {
@@ -28,7 +12,7 @@ export function ProjectSection() {
         Services
       </h1>
 
-      <div className="grid grid-cols-2 max-[750px]:grid-cols-1 gap-[2rem]">
+      <div className=" max-[750px]:grid-cols-1 gap-[2rem]">
         {projects.map((project, index) => (
           <div
             key={index}
