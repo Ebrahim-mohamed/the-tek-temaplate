@@ -1,6 +1,7 @@
 import { AboutSection } from "../components/AboutPage/AboutSection";
 import { TrustedEngineerSection } from "../components/AboutPage/Data";
 import { ExperienceSection } from "../components/AboutPage/ExperienceSection";
+import { ProfessionalHistory } from "../components/AboutPage/NewExSection";
 import { HeroSection } from "../components/HeroSection";
 
 export default function About(){
@@ -8,6 +9,7 @@ export default function About(){
         <HeroSection text="I’m Mostafa Naguib" img="homePage" />
         <AboutSection/>
         {/* <TrustedEngineerSection/> */}
-        <ExperienceSection/>
+        {/* <ExperienceSection/> */}
+        <ProfessionalHistory/>
     </div>
 }
