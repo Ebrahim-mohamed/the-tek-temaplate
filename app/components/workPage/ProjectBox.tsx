@@ -8,7 +8,11 @@ interface ProjectMeta {
 
 interface ProjectBoxProps {
   title: string;
-  description: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  description4: string;
+  description5: string;
   image: string;
   imageAlt: string;
   meta: ProjectMeta[];
@@ -17,7 +21,11 @@ interface ProjectBoxProps {
 
 const ProjectBox = ({
   title,
-  description,
+  description1,
+  description2,
+  description3,
+  description4,
+  description5,
   image,
   imageAlt,
   meta,
@@ -32,7 +40,7 @@ const ProjectBox = ({
       <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-10 items-start">
         <div className="relative rounded-2xl overflow-hidden max-[750px]:w-full ">
           <Image
-            src={`/assets/workPage/${image}.png`}
+            src={`/assets/workPage/${image}.jpeg`}
             alt={imageAlt}
             
             className="object-cover w-full"
@@ -44,10 +52,22 @@ const ProjectBox = ({
         <div className="flex flex-col justify-center h-full py-4">
           <h3 className="text-2xl font-bold mb-4">{title}</h3>
           <p className="text-gray-500 text-sm leading-relaxed mb-6">
-            {description}
+            {description1}
+          </p>
+          <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            {description2}
+          </p>
+          <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            {description3}
+          </p>
+          <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            {description4}
+          </p>
+          <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            {description5}
           </p>
 
-          <div className="divide-y divide-gray-200 border-t border-gray-200">
+          {/* <div className="divide-y divide-gray-200 border-t border-gray-200">
             {meta.map((item) => (
               <div
                 key={item.label}
@@ -59,7 +79,7 @@ const ProjectBox = ({
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
