@@ -1,19 +1,23 @@
 const projects = [
   {
     image: "pro3",
-    name: "Smart Irrigation System",
+    name: "Founder EGYSAMART for Modern Engineers",
   },
   {
     image: "pro2",
-    name: "Smart Irrigation System",
+    name: "Founder and Managing Director of EUROPT",
   },
   {
     image: "pro3",
-    name: "Smart Irrigation System",
+    name: "Managing Director of ASROW AS",
   },
   {
     image: "pro4",
-    name: "Smart Irrigation System",
+    name: "Commercial Head-Board Member of EGYSMART",
+  },
+  {
+    image: "pro4",
+    name: "Professional Trainer",
   },
 ];
 
@@ -21,7 +25,7 @@ export function ProjectSection() {
   return (
     <div className="bg-[#F1F0EE] rounded-t-[7rem] p-[var(--sectionPadding)]">
       <h1 className="text-[1.5rem] text-center text-[#616161] mb-[3rem]">
-        Featured Work
+        Services
       </h1>
 
       <div className="grid grid-cols-2 max-[750px]:grid-cols-1 gap-[2rem]">
