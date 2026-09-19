@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export function ServiceBox({head,pra,img}:{head:string,pra:string,img:string}){
-    return <div className="p-[1.5rem] flex flex-col items-center justify-center gap-[0.5rem] bg-[#000] rounded-[1rem] ">
+    return <div className="p-[1.5rem] flex flex-col max-w-[30rem] items-center justify-center gap-[0.5rem] bg-[#000] rounded-[1rem] ">
         <div className="p-[1.5rem] bg-[#BC9D61] rounded-full">
 
         <Image alt="icon" src={`/assets/homePage/${img}.svg`} width={500} height={500}  className="w-[5rem] aspect-square"/>

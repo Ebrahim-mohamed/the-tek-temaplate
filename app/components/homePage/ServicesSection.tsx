@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ServiceBox } from "./ServiceBox";
 
-const services=[{head:"Mechanical Design",pra:"Lorem ipsum dolor sit amet consectetur. Sed nulla eget hac ornare turpis tincidunt. ",icon:"serv"},{head:"Electrical Design",pra:"Lorem ipsum dolor sit amet consectetur. Sed nulla eget hac ornare turpis tincidunt. ",icon:"serv"},{head:"Project Management",pra:"Lorem ipsum dolor sit amet consectetur. Sed nulla eget hac ornare turpis tincidunt. ",icon:"serv"},{head:"Consulting",pra:"Lorem ipsum dolor sit amet consectetur. Sed nulla eget hac ornare turpis tincidunt. ",icon:"serv"}]
+const services=[{head:"Business Consulting",pra:"Helping businesses identify opportunities, overcome challenges, and develop practical strategies for sustainable growth and improved performance.",icon:"serv"},{head:"Individual Mentoring",pra:"One-on-one mentoring designed to help professionals and entrepreneurs develop their skills, make better decisions, and achieve their career and business goals.",icon:"serv"},{head:"Professional Courses",pra:"Practical, industry-focused courses designed to build essential business skills and provide participants with the knowledge and tools they need to succeed.",icon:"serv"},{head:"Corporate Training",pra:"Customized training programs designed for companies to strengthen their teams’ capabilities, improve performance, and develop essential business and leadership skills.",icon:"serv"}]
 
 export function ServicesSection(){
     return <div className=" flex max-[920px]:flex-col max-[920px]:justify-center max-[920px]:items-center justify-between w-dvw gap-[3rem] rounded-b-[7rem] p-[2rem] bg-[#1A1916] p-[var(--sectionPadding)] ">
