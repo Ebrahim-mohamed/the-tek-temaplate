@@ -5,7 +5,7 @@ import { HeroSection } from "../components/HeroSection";
 
 export default function About(){
     return <div>
-        <HeroSection text="I’m Ahmad Mohamd" img="homePage" />
+        <HeroSection text="I’m Mostafa Naguib" img="homePage" />
         <AboutSection/>
         {/* <TrustedEngineerSection/> */}
         <ExperienceSection/>

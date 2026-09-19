@@ -10,7 +10,7 @@ export function Header() {
 
     return (
         <div className="absolute z-50 flex items-center justify-between w-full p-[2rem] bg-transparent">
-            <h1 className="text-white text-[3rem]">Logo</h1>
+            <Image src="/assets/logo.png" width={300} height={300} alt="logo image" className="w-[8rem]" />
 
             {/* Desktop Navbar */}
             <div className="hidden min-[501px]:block">

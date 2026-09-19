@@ -7,7 +7,7 @@ export function Navbar() {
             <NavbarTab name="Home" to="#" />
             <NavbarTab name="About" to="about" />
             <NavbarTab name="Services" to="services" />
-            <NavbarTab name="Work" to="work" />
+            <NavbarTab name="Cources" to="work" />
             {/* <NavbarTab name="Contact" to="contact" /> */}
         </div>
     );
