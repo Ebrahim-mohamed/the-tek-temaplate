@@ -3,7 +3,7 @@ import ProjectsSection from "../components/workPage/ProjectsSection";
 
 export default function work(){
     return <div>
-        <HeroSection text="My Work" img="homePage" />
+        <HeroSection text="My Courses" img="homePage" />
         <ProjectsSection/>
     </div>
 }

@@ -10,7 +10,7 @@ import { ContactSection } from "./components/homePage/ContactSection";
 export default function Home() {
   return (
     <div>
-      <HeroSection text="Built for Growth," secText="Driven by Business." img="homePage" />
+      <HeroSection text="Scaling Businesses" img="homePage" />
       <AboutSection/>
       <ServicesSection/>
       {/* <ClientsSection/> */}

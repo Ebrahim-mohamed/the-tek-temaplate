@@ -28,13 +28,13 @@ const ServiceBox = ({
       <p className="text-gray-500 text-[1.1rem] leading-relaxed mb-6">
         {description}
       </p>
-      <Link
+      {/* <Link
         href={href}
         className="inline-flex items-center gap-2 w-fit border border-gray-300 rounded-full px-5 py-2 text-sm font-medium hover:bg-gray-50 transition"
       >
         Learn More
         <span className="text-xs">↗</span>
-      </Link>
+      </Link> */}
     </div>
   );
 
