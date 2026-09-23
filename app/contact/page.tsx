@@ -4,7 +4,7 @@ import { HeroSection } from "../components/HeroSection";
 
 export default function Contact(){
     return <div>
-        <HeroSection text="Let’s Talk" img="homePage" />
+        <HeroSection text="Let’s Talk" />
         <ContactSection/>
         {/* <FaqSection/> */}
     </div>
