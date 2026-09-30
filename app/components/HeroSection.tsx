@@ -1,9 +1,11 @@
 export function HeroSection({
   text,
   secText,
+  img,
 }: {
   text: string;
   secText?: string;
+  img: string;
 }) {
   return (
     <div
@@ -19,10 +21,16 @@ export function HeroSection({
         text-white
         text-[2rem]
         bg-cover
-        bg-start
-        bg-[url('/assets/mobileBanner.jpeg')]
-        min-[1000px]:bg-[url('/assets/homePage.jpg')]
+        bg-center
+        bg-[image:var(--mobile-bg)]
+        min-[1000px]:bg-[image:var(--desktop-bg)]
       "
+      style={
+        {
+          "--mobile-bg": `url('/assets/${img}-mobile.jpg')`,
+          "--desktop-bg": `url('/assets/${img}.jpg')`,
+        } as React.CSSProperties
+      }
     >
       {/* Overlay */}
       <div className="absolute inset-0 z-10 rounded-b-[7rem] bg-[#00000091]" />

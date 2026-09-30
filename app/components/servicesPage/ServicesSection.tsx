@@ -16,7 +16,7 @@ const ServicesSection = () => {
         description="Helping businesses identify opportunities, overcome challenges, and develop practical strategies for sustainable growth and improved performance."
         image={"serv1"}
         imageAlt="Structural Design"
-        imagePosition="right"
+        imagePosition="left"
         highlighted
       />
 
@@ -25,7 +25,7 @@ const ServicesSection = () => {
         description="Customized training programs designed for companies to strengthen their teams’ capabilities, improve performance, and develop essential business and leadership skills."
         image={"serv4"}
         imageAlt="Mechanical Design"
-        imagePosition="left"
+        imagePosition="right"
       />
     </section>
   );
