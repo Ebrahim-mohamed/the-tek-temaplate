@@ -1,12 +1,32 @@
+import { hexToRgba, resolveMedia } from "../lib/api";
+
+/**
+ * Reusable hero banner for every page.
+ * - Dynamic pages pass `desktopImage` / `mobileImage` (any URL or /uploads path).
+ * - Old usage `img="homePage"` still works (loads /assets/homePage.jpg + homePage-mobile.jpg).
+ */
 export function HeroSection({
   text,
   secText,
   img,
+  desktopImage,
+  mobileImage,
+  overlayColor = "#000000",
+  overlayOpacity = 0.57,
 }: {
   text: string;
   secText?: string;
-  img: string;
+  img?: string;
+  desktopImage?: string;
+  mobileImage?: string;
+  overlayColor?: string;
+  overlayOpacity?: number;
 }) {
+  const clean = (url: string) => resolveMedia(url).replace(/["'\\()\n\r]/g, (c) => encodeURIComponent(c));
+
+  const desktop = desktopImage || (img ? `/assets/${img}.jpg` : "");
+  const mobile = mobileImage || (img ? `/assets/${img}-mobile.jpg` : desktop);
+
   return (
     <div
       className="
@@ -27,13 +47,16 @@ export function HeroSection({
       "
       style={
         {
-          "--mobile-bg": `url('/assets/${img}-mobile.jpg')`,
-          "--desktop-bg": `url('/assets/${img}.jpg')`,
+          "--mobile-bg": `url('${clean(mobile || desktop)}')`,
+          "--desktop-bg": `url('${clean(desktop || mobile)}')`,
         } as React.CSSProperties
       }
     >
       {/* Overlay */}
-      <div className="absolute inset-0 z-10 rounded-b-[7rem] bg-[#00000091]" />
+      <div
+        className="absolute inset-0 z-10 rounded-b-[7rem]"
+        style={{ backgroundColor: hexToRgba(overlayColor, overlayOpacity) }}
+      />
 
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center">

@@ -1,16 +1,46 @@
 import Image from "next/image";
+import { isRemote, resolveMedia } from "../../lib/api";
 
-export function AboutSection(){
-    return <div className=" bg-white rounded-b-[7rem] p-[var(--sectionPadding)] " >
-        <h1 className="text-[#616161] text-[3rem] mb-[3rem] text-center">About Me</h1>
-        <div className=" flex max-[800px]:flex-col items-center gap-[4rem] justify-between ">
-            <Image alt="about iamge" width={500} height={500} src="/assets/homeAbout.jpeg" className="rounded-[1.5rem]  w-full  " />
-        <div className="rounded-2xl p-[1.5rem] rounded-[0.75rem] bg-white max-w-[60rem] ml-[-3rem] max-[750px]:ml-0">
-            <p className="text-[2rem] leading-[2.5rem] font-semibold text-[#100000]">Empowering Engineers. Building Leaders. Driving Professional Growth.</p>
-            <p className="text-[1.125rem] text-[#444444]">With over 10 years of experience in business development and entrepreneurship, I combine engineering expertise with practical business knowledge to help engineers develop the skills they need to lead businesses and advance their professional careers.</p>
-            <p className="text-[1.125rem] text-[#444444]">Through specialized courses and practical training, I help engineers understand how to lead teams, manage businesses, identify new opportunities, make effective business decisions, and build the mindset needed for long-term professional success.</p>
-            <p className="text-[1.125rem] text-[#444444]">My mission is to bridge the gap between engineering expertise and business leadership — empowering engineers to become confident leaders, build successful businesses, and achieve sustainable professional growth.</p>
+export type AboutPageSectionContent = {
+  sectionBg: string;
+  cardBg: string;
+  heading: string;
+  image: string;
+  imageAlt: string;
+  headline: string;
+  paragraphs: { text: string }[];
+};
+
+export function AboutSection({ content }: { content: AboutPageSectionContent }) {
+  const src = resolveMedia(content.image);
+
+  return (
+    <div
+      className="rounded-b-[7rem] p-[var(--sectionPadding)]"
+      style={{ backgroundColor: content.sectionBg }}
+    >
+      <h1 className="text-[#616161] text-[3rem] mb-[3rem] text-center">{content.heading}</h1>
+      <div className="flex max-[800px]:flex-col items-center gap-[4rem] justify-between">
+        <Image
+          alt={content.imageAlt}
+          width={500}
+          height={500}
+          src={src}
+          unoptimized={isRemote(src)}
+          className="rounded-[1.5rem] w-full"
+        />
+        <div
+          className="p-[1.5rem] rounded-[0.75rem] max-w-[60rem] ml-[-3rem] max-[750px]:ml-0"
+          style={{ backgroundColor: content.cardBg }}
+        >
+          <p className="text-[2rem] leading-[2.5rem] font-semibold text-[#100000]">{content.headline}</p>
+          {content.paragraphs.map((p, i) => (
+            <p key={i} className="text-[1.125rem] text-[#444444]">
+              {p.text}
+            </p>
+          ))}
         </div>
-        </div>
+      </div>
     </div>
+  );
 }

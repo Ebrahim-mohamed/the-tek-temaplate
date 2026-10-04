@@ -1,12 +1,44 @@
 import Image from "next/image";
+import { isRemote, resolveMedia } from "../../lib/api";
 
-export function ServiceBox({head,pra,img,isMain}:{head:string,pra:string,img:string,isMain?:boolean}){
-    return <div className={`p-[1.5rem] flex flex-col ${isMain?" max-w-full ":" max-w-[30rem] "} items-center justify-center gap-[0.5rem] bg-[#000] rounded-[1rem] `}>
-        {/* <div className="p-[1.5rem] bg-[#BC9D61] rounded-full aspect-square flex items-center justify-center"> */}
+/**
+ * NOTE: this replaces your previous ServiceBox (I couldn't see its source).
+ * `img` is now a full image path / URL (e.g. "/assets/serv1.png" or an uploaded "/uploads/..."),
+ * not just a name. Adjust the markup/classes below to match your original look.
+ */
+export function ServiceBox({
+  head,
+  pra,
+  img,
+  isMain = false,
+}: {
+  head: string;
+  pra: string;
+  img: string;
+  isMain?: boolean;
+}) {
+  const src = resolveMedia(img);
 
-        <Image alt="icon" src={`/assets/servicesPage/${img}.png`} width={500} height={500}  className={`${img==="serv4"?" w-[15rem] ":" w-[15rem] "}`}/>
-        {/* </div> */}
-        <h3 className="text-[1.5rem] text-white">{head}</h3>
-        <p className="text-[0.75rem] text-[#888] text-center">{pra}</p>
+  return (
+    <div
+      className={`flex gap-[1.25rem] rounded-[1.5rem] border border-white/15 bg-white/5 p-[1.5rem] text-white ${
+        isMain ? "flex-col min-[570px]:flex-row min-[570px]:items-center" : "flex-col"
+      }`}
+    >
+      {src && (
+        <Image
+          alt=""
+          width={64}
+          height={64}
+          src={src}
+          unoptimized={isRemote(src)}
+          className="h-[4rem] w-[4rem] shrink-0 object-contain"
+        />
+      )}
+      <div className="flex flex-col gap-[0.5rem]">
+        <h2 className={isMain ? "text-[1.75rem]" : "text-[1.25rem]"}>{head}</h2>
+        <p className="text-[1rem] opacity-80">{pra}</p>
+      </div>
     </div>
+  );
 }

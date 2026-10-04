@@ -1,23 +1,57 @@
 import Link from "next/link";
+import { safeHref } from "../../lib/api";
 import { ServiceBox } from "./ServiceBox";
 
-const services=[{head:"Business Consulting",pra:"Helping businesses identify opportunities, overcome challenges, and develop practical strategies for sustainable growth and improved performance.",icon:"serv1"},{head:"Corporate Training",pra:"Customized training programs designed for companies to strengthen their teams’ capabilities, improve performance, and develop essential business and leadership skills.",icon:"serv4"}]
-const mainService={head:"Business Development Courses",pra:"Practical, industry-focused courses designed to build essential business skills and provide participants with the knowledge and tools they need to succeed.",icon:"serv3"}
-export function ServicesSection(){
-    return <div className=" flex max-[920px]:flex-col max-[920px]:justify-center max-[920px]:items-center justify-between w-dvw gap-[3rem] rounded-b-[7rem] p-[2rem] bg-[#1A1916] p-[var(--sectionPadding)] ">
-        <div className="flex flex-col gap-[3rem] text-white max-[920px]:items-center">
-            <h1 className="text-[4rem] max-[570px]:text-[3rem] "><span className="text-[#C8A96E]">Services</span> I offer</h1>
-            <p className="text-[1rem] max-w-[35rem]">Explore the range of services we offer, including business courses for engineers to develop their skills and advance their careers. We also collaborate with companies to improve business results, develop their employees, and create sustainable professional growth.</p>
-        <Link href={"/services"} className="py-[0.75rem] w-fit px-[2rem] rounded-[1rem] border-white border">Learn More</Link>
-        </div>
-        <div className="flex flex-col gap-[2rem]">
+type Service = { head: string; pra: string; icon: string };
 
-        <div className="w-full">
+export type ServicesContent = {
+  bgColor: string;
+  accentColor: string;
+  headingAccent: string;
+  headingRest: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  mainService: Service;
+  items: Service[];
+};
+
+export function ServicesSection({ content }: { content: ServicesContent }) {
+  const { mainService, items } = content;
+
+  return (
+    <div
+      className="flex max-[920px]:flex-col max-[920px]:justify-center max-[920px]:items-center justify-between w-dvw gap-[3rem] rounded-b-[7rem] p-[var(--sectionPadding)]"
+      style={{ backgroundColor: content.bgColor }}
+    >
+      <div className="flex flex-col gap-[3rem] text-white max-[920px]:items-center">
+        <h1 className="text-[4rem] max-[570px]:text-[3rem]">
+          <span style={{ color: content.accentColor }}>{content.headingAccent}</span> {content.headingRest}
+        </h1>
+        <p className="text-[1rem] max-w-[35rem]">{content.description}</p>
+        {content.buttonText && (
+          <Link
+            href={safeHref(content.buttonLink)}
+            className="py-[0.75rem] w-fit px-[2rem] rounded-[1rem] border-white border"
+          >
+            {content.buttonText}
+          </Link>
+        )}
+      </div>
+      <div className="flex flex-col gap-[2rem]">
+        {mainService.head && (
+          <div className="w-full">
             <ServiceBox head={mainService.head} pra={mainService.pra} img={mainService.icon} isMain />
-        </div>
-        <div className="grid gap-[2rem] grid-cols-2 max-[570px]:grid-cols-1 ">
-            {services.map(serv=><ServiceBox head={serv.head} pra={serv.pra} img={serv.icon} key={serv.head} />)}
-        </div>
-        </div>
+          </div>
+        )}
+        {items.length > 0 && (
+          <div className="grid gap-[2rem] grid-cols-2 max-[570px]:grid-cols-1">
+            {items.map((serv, i) => (
+              <ServiceBox key={`${i}-${serv.head}`} head={serv.head} pra={serv.pra} img={serv.icon} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
+  );
 }
