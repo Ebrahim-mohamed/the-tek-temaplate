@@ -53,7 +53,7 @@ export function CourseBox({ course, shaded }: { course: CourseItem; shaded: bool
             </p>
           ))}
 
-          {course.meta.length > 0 && (
+          {/* {course.meta.length > 0 && (
             <dl className="mt-[0.5rem] grid grid-cols-2 gap-[1rem] min-[700px]:grid-cols-4">
               {course.meta.map((m, i) => (
                 <div key={i} className="rounded-[1rem] border border-black/10 bg-white/60 p-[1rem]">
@@ -62,7 +62,7 @@ export function CourseBox({ course, shaded }: { course: CourseItem; shaded: bool
                 </div>
               ))}
             </dl>
-          )}
+          )} */}
         </div>
       </div>
     </article>

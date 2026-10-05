@@ -34,7 +34,7 @@ export const defaultServices = {
         title: "Business Consulting",
         description:
           "Helping businesses identify opportunities, overcome challenges, and develop practical strategies for sustainable growth and improved performance.",
-        image: "/assets/serv1.png",
+        image: "/assets/servicesPage/serv1.png",
         imageAlt: "Structural Design",
         imageLeft: true,
         highlighted: true,
@@ -43,7 +43,7 @@ export const defaultServices = {
         title: "Corporate Training",
         description:
           "Customized training programs designed for companies to strengthen their teams’ capabilities, improve performance, and develop essential business and leadership skills.",
-        image: "/assets/serv4.png",
+        image: "/assets/servicesPage/serv4.png",
         imageAlt: "Mechanical Design",
         imageLeft: false,
         highlighted: false,
