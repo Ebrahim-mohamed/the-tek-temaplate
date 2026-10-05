@@ -6,7 +6,7 @@ import type { PageSchema } from "./types";
  */
 export const coursesSchema: PageSchema = {
   label: "Courses",
-  path: "/courses",
+  path: "/work",
   sections: [
     // {
     //   key: "seo",
@@ -25,8 +25,7 @@ export const coursesSchema: PageSchema = {
         { type: "text", key: "subtitle", label: "Second line", help: "Leave empty to hide." },
         { type: "image", key: "desktopImage", label: "Background image (desktop)" },
         { type: "image", key: "mobileImage", label: "Background image (mobile)" },
-        { type: "color", key: "overlayColor", label: "Overlay color" },
-        { type: "range", key: "overlayOpacity", label: "Overlay strength", min: 0, max: 1, step: 0.01 },
+        
       ],
     },
     {

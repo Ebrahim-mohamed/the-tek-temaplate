@@ -25,8 +25,7 @@ export const aboutSchema: PageSchema = {
         { type: "text", key: "subtitle", label: "Second line", help: "Leave empty to hide." },
         { type: "image", key: "desktopImage", label: "Background image (desktop)" },
         { type: "image", key: "mobileImage", label: "Background image (mobile)" },
-        { type: "color", key: "overlayColor", label: "Overlay color" },
-        { type: "range", key: "overlayOpacity", label: "Overlay strength", min: 0, max: 1, step: 0.01 },
+        
       ],
     },
     {
@@ -46,8 +45,7 @@ export const aboutSchema: PageSchema = {
           titleKey: "text",
           fields: [{ type: "textarea", key: "text", label: "Text", rows: 4 }],
         },
-        { type: "color", key: "sectionBg", label: "Section background color" },
-        { type: "color", key: "cardBg", label: "Text card background color" },
+        
       ],
     },
     {

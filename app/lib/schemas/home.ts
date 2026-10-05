@@ -25,8 +25,7 @@ export const homeSchema: PageSchema = {
         { type: "text", key: "subtitle", label: "Second line", help: "Leave empty to hide." },
         { type: "image", key: "desktopImage", label: "Background image (desktop)" },
         { type: "image", key: "mobileImage", label: "Background image (mobile)" },
-        { type: "color", key: "overlayColor", label: "Overlay color" },
-        { type: "range", key: "overlayOpacity", label: "Overlay strength", min: 0, max: 1, step: 0.01 },
+       
       ],
     },
     {
@@ -46,10 +45,7 @@ export const homeSchema: PageSchema = {
           titleKey: "text",
           fields: [{ type: "textarea", key: "text", label: "Text", rows: 4 }],
         },
-        { type: "color", key: "sectionBg", label: "Outer background color" },
-        { type: "color", key: "panelBg", label: "Panel background color" },
-        { type: "color", key: "cardBg", label: "Text card background color" },
-      ],
+         ],
     },
     {
       key: "services",
@@ -83,8 +79,7 @@ export const homeSchema: PageSchema = {
             { type: "image", key: "icon", label: "Icon" },
           ],
         },
-        { type: "color", key: "bgColor", label: "Background color" },
-        { type: "color", key: "accentColor", label: "Accent (colored word) color" },
+       
       ],
     },
     {
@@ -94,15 +89,12 @@ export const homeSchema: PageSchema = {
         { type: "boolean", key: "visible", label: "Show this section" },
         { type: "boolean", key: "showStatus", label: "Show availability status" },
         { type: "text", key: "statusText", label: "Status text" },
-        { type: "color", key: "statusColor", label: "Status dot color" },
+        
         { type: "text", key: "headingLine1", label: "Heading line 1" },
         { type: "text", key: "headingLine2", label: "Heading line 2", help: "Leave empty for a one-line heading." },
         { type: "text", key: "buttonText", label: "Button text", help: "Leave empty to hide the button." },
         { type: "url", key: "buttonLink", label: "Button link" },
-        { type: "color", key: "buttonBg", label: "Button color" },
-        { type: "color", key: "buttonTextColor", label: "Button text color" },
-        { type: "color", key: "bgColor", label: "Background color" },
-        { type: "color", key: "textColor", label: "Text color" },
+        
       ],
     },
   ],
