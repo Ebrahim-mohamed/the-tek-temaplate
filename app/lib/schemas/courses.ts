@@ -50,17 +50,6 @@ export const coursesSchema: PageSchema = {
             { type: "textarea", key: "description3", label: "Point 1", rows: 3, help: "Leave empty to hide." },
             { type: "textarea", key: "description4", label: "Point 2", rows: 3, help: "Leave empty to hide." },
             { type: "textarea", key: "description5", label: "Point 3", rows: 3, help: "Leave empty to hide." },
-            {
-              type: "list",
-              key: "meta",
-              label: "Details (date, timeline, location, price...)",
-              itemLabel: "Detail",
-              titleKey: "label",
-              fields: [
-                { type: "text", key: "label", label: "Label" },
-                { type: "text", key: "value", label: "Value" },
-              ],
-            },
           ],
         },
       ],

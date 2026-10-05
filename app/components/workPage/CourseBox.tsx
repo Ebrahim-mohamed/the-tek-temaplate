@@ -10,7 +10,6 @@ export type CourseItem = {
   description5: string;
   image: string;
   imageAlt: string;
-  meta: { label: string; value: string }[];
 };
 
 /**
