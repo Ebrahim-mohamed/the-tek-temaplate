@@ -12,8 +12,8 @@ export const defaultAbout = {
   hero: {
     title: "I’m Mostafa Naguib",
     subtitle: "",
-    desktopImage: "/assets/aboutPage.jpg",
-    mobileImage: "/assets/aboutPage-mobile.jpg",
+    desktopImage: "/assets/aboutPage.jpeg",
+    mobileImage: "/assets/aboutPage-mobile.jpeg",
     overlayColor: "#000000",
     overlayOpacity: 0.57,
   },

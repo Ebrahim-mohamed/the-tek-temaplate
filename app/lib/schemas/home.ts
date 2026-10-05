@@ -8,15 +8,15 @@ export const homeSchema: PageSchema = {
   label: "Home",
   path: "/",
   sections: [
-    {
-      key: "seo",
-      label: "Page title and description (SEO)",
-      description: "Shown in the browser tab and on Google. Leave empty to keep the site default.",
-      fields: [
-        { type: "text", key: "title", label: "Page title" },
-        { type: "textarea", key: "description", label: "Meta description", rows: 3 },
-      ],
-    },
+    // {
+    //   key: "seo",
+    //   label: "Page title and description (SEO)",
+    //   description: "Shown in the browser tab and on Google. Leave empty to keep the site default.",
+    //   fields: [
+    //     { type: "text", key: "title", label: "Page title" },
+    //     { type: "textarea", key: "description", label: "Meta description", rows: 3 },
+    //   ],
+    // },
     {
       key: "hero",
       label: "Hero (top banner)",

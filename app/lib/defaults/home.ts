@@ -53,7 +53,7 @@ export const defaultHome = {
     mainService: {
       head: "Business Development Courses",
       pra: "Practical, industry-focused courses designed to build essential business skills and provide participants with the knowledge and tools they need to succeed.",
-      icon: "/assets/serv3.png",
+      icon: "/assets/servicesPage/serv3.png",
     },
     items: [
       {
